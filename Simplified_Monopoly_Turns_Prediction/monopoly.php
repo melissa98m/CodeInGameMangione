@@ -10,10 +10,17 @@ class MonopolyGame {
     private const  JAIL_POSITION = 10;
     private const  GO_TO_JAIL_POSITION = 30;
 
+    /**
+     * @param $input
+     */
     public function __construct($input) {
         $this->initializeGame($input);
     }
 
+    /**
+     * @param $input
+     * @return void
+     */
     private function initializeGame($input): void
     {
         $nbrPlayers = (int)trim(fgets($input));
@@ -41,6 +48,9 @@ class MonopolyGame {
         }
     }
 
+    /**
+     * @return void
+     */
     public function simulate(): void
     {
         while ($this->currentRollIndex < count($this->diceRolls)) {
@@ -55,6 +65,10 @@ class MonopolyGame {
         $this->outputResults();
     }
 
+    /**
+     * @param $player
+     * @return void
+     */
     private function processTurn($player): void
     {
         $name = $player['name'];
@@ -93,6 +107,10 @@ class MonopolyGame {
         }
     }
 
+    /**
+     * @param $state
+     * @return void
+     */
     private function handleJailTurn(&$state): void
     {
         $dice = $this->diceRolls[$this->currentRollIndex++];
@@ -111,6 +129,10 @@ class MonopolyGame {
         }
     }
 
+    /**
+     * @param $state
+     * @return void
+     */
     private function sendToJail(&$state): void
     {
         $state['position'] = self::JAIL_POSITION;
@@ -118,6 +140,9 @@ class MonopolyGame {
         $state['jailRolls'] = 0;
     }
 
+    /**
+     * @return void
+     */
     private function outputResults(): void
     {
         $output = [];
