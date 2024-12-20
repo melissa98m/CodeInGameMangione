@@ -1,5 +1,12 @@
-Énoncé
 
+
+Les concepts suivants peuvent vous aider à résoudre ce puzzle. Découvrez-les et mettez-les en pratique pour continuer votre progression.
+
+    Boucles
+    Conditions
+
+
+Énoncé
 Objectif
 Your goal is to recreate a simplified turns prediction for the Monopoly™ game.
 
