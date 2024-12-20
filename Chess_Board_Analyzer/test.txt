@@ -1,4 +1,4 @@
-List all board exemple in Code in Game
+List all board exemples in Code in Game
 
 Rooks mate
 
