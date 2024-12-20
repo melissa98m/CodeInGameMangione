@@ -1,2 +1,2 @@
 # CodeInGameMangione
-Exercice code in game  Cerberus
+Exercice code in game
